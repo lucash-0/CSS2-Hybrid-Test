@@ -1,0 +1,15 @@
+.loading {
+  display: flex;
+  flex-direction: column;
+}
+.loading-centre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.test-card {
+  width: 800px;
+  height: 600px;
+  position: relative;
+}
