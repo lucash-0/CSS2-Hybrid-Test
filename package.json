@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@lucash-0/react-neuropsych-trails": "^0.1.14",
+    "@lucash-0/react-neuropsych-trails": "^0.1.24",
     "@orcatech/react-neuropsych-stroop": "^1.2.9",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -11,6 +11,7 @@
     "bootstrap": "^4.5.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
+    "react-csv": "^2.0.3",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "reactstrap": "^8.4.1"

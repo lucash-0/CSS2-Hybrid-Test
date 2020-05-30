@@ -30,7 +30,12 @@ class StroopTest extends Component {
   onComplete = (data) => {
     // handle test completion
     //const { errors, successes, begin, finish, timeLimitReached } = data;
-    this.props.handleResults({ results: { type: "stroop", data } });
+    const { words, colours } = this.state;
+
+    console.log({ ...data, colours, words });
+    this.props.handleResults({
+      results: { type: "stroop", data: { ...data, colours, words } },
+    });
   };
 
   onSuccess = (data) => {
@@ -43,12 +48,12 @@ class StroopTest extends Component {
 
   componentDidMount() {
     let wordarr = this.data.words;
-    console.log(wordarr);
+    //console.log(wordarr);
     let colarr = this.data.colours;
-    console.log(colarr);
+    //console.log(colarr);
     this.shuffle(wordarr, colarr);
-    console.log(wordarr);
-    console.log(colarr);
+    //console.log(wordarr);
+    //console.log(colarr);
 
     const halfsize = Math.floor(wordarr.length / 2);
 
@@ -78,7 +83,7 @@ class StroopTest extends Component {
       }
     }
 
-    console.log(combos);
+    //console.log(combos);
 
     this.setState({
       words: wordarr,

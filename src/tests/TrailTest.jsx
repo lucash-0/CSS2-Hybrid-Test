@@ -52,6 +52,7 @@ class TrailTest extends Component {
     this.data.stop = date.getTime();
     console.log("Trails Data:");
     console.log(this.data);
+
     this.props.handleResults({ results: { data: this.data, type: "trails" } });
   };
 

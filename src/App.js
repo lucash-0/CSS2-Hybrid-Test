@@ -88,7 +88,11 @@ class App extends Component {
         {selectedPage === "menu" ? (
           <Menu selectTest={this.selectTest} />
         ) : (
-          <Card className="test-card mx-auto">
+          <Card
+            className={`test-card mx-auto ${
+              selectedPage === "results" ? "border-0" : null
+            }`}
+          >
             <CardBody>
               {selectedPage === "stroop" ? (
                 <StroopTest handleResults={this.handleResults} />
