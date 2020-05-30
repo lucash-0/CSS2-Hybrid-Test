@@ -145,7 +145,7 @@ class Results extends Component {
           )}
         </div>
 
-        <Button onClick={this.props.goBack} color="secondary">
+        <Button onClick={this.props.goBack} color="secondary" className="mb-3">
           Go Back
         </Button>
       </div>

@@ -72,7 +72,7 @@ class StroopTest extends Component {
     let i = 3;
     let lastword;
     let lastcol;
-    while (i < 12) {
+    while (i <= 12) {
       const rand1 = Math.round(0 + Math.random() * (wordarr.length - 1));
       const rand2 = Math.round(0 + Math.random() * (wordarr.length - 1));
       if (rand1 !== rand2 && rand1 !== lastword && rand2 !== lastcol) {
