@@ -113,7 +113,7 @@ class Results extends Component {
         correctWord: event.correctToken.text,
         correctColour: event.correctToken.coltext,
         selectedWord: event.selectedToken.text,
-        selectedColor: event.selectedToken.coltext,
+        selectedColour: event.selectedToken.coltext,
         outcome: event.type,
         elapsed: (event.stamp - start) / 1000,
         reaction: (event.stamp - lastTs) / 1000,
