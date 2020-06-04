@@ -17,7 +17,7 @@ class HybridTest extends Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.data.start = new Date().getTime();
   }
 

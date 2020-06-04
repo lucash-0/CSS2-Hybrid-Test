@@ -109,6 +109,7 @@ class App extends Component {
             </CardBody>
           </Card>
         )}
+        <p className="text-monospace text-center mt-3 text-muted">v1.0.1</p>
       </Container>
     );
   }
