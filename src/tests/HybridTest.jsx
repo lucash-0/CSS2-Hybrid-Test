@@ -1,13 +1,9 @@
 import React from "react";
 import { Component } from "react";
-import PropTypes from "prop-types";
-import Trails from "@lucash-0/react-neuropsych-trails";
+//import PropTypes from "prop-types";
+import Hybrid from "@lucash-0/react-stroop-trails-hybrid";
 
-class TrailTest extends Component {
-  static propTypes = {
-    part: PropTypes.string.isRequired,
-  };
-
+class HybridTest extends Component {
   state = {
     progress: 0,
   };
@@ -50,16 +46,16 @@ class TrailTest extends Component {
 
   handleCompleted = (date) => {
     this.data.stop = date.getTime();
-    console.log("Trails Data:");
+    console.log("Hybrid Data:");
     console.log(this.data);
 
-    this.props.handleResults({ results: { data: this.data, type: "trails" } });
+    this.props.handleResults({ results: { data: this.data, type: "hybrid" } });
   };
 
   render() {
     return (
-      <Trails
-        part={this.props.part}
+      <Hybrid
+        //part={this.props.part}
         progress={this.state.progress}
         feedback={true}
         errorText="X"
@@ -74,4 +70,4 @@ class TrailTest extends Component {
   }
 }
 
-export default TrailTest;
+export default HybridTest;

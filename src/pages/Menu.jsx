@@ -35,11 +35,14 @@ class Menu extends Component {
         <Col sm="4">
           <Card body inverse color="warning">
             <CardTitle className="h4">Hybrid Test</CardTitle>
-            <CardText>coming soon</CardText>
-            <Button disabled>Under construction</Button>
-            {/*<Row>
+            <CardText>This is the stroop test</CardText>
+            <Row>
               <Col>
-                <Button color="primary" block>
+                <Button
+                  color="primary"
+                  block
+                  onClick={() => this.props.selectTest("hybrid")}
+                >
                   Play
                 </Button>
               </Col>
@@ -48,7 +51,7 @@ class Menu extends Component {
                   Instructions
                 </Button>
               </Col>
-            </Row>*/}
+            </Row>
           </Card>
         </Col>
         <Col sm="4">

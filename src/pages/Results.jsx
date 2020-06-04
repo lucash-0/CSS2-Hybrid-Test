@@ -11,6 +11,7 @@ class Results extends Component {
       titles: {
         stroop: "Stroop Results",
         trails: "Trails Results",
+        hybrid: "Hybrid Test Results",
       },
       headers: {
         stroop: [
@@ -30,9 +31,18 @@ class Results extends Component {
           { label: "Time elapsed", key: "elapsed" },
           { label: "Reaction time", key: "reaction" },
         ],
+        hybrid: [
+          { label: "Event", key: "event" },
+          { label: "Correct Word", key: "correctWord" },
+          { label: "Correct Colour", key: "correctColour" },
+          { label: "Selected Word", key: "selectedWord" },
+          { label: "Selected Colour", key: "selectedColour" },
+          { label: "Outcome", key: "outcome" },
+          { label: "Time elapsed", key: "elapsed" },
+          { label: "Reaction time", key: "reaction" },
+        ],
       },
       data: null,
-      date: null,
     };
   }
 
@@ -41,6 +51,8 @@ class Results extends Component {
       this.stroopEvents(this.props.results.data);
     } else if (this.props.results.type === "trails") {
       this.trailsEvents(this.props.results.data);
+    } else if (this.props.results.type === "hybrid") {
+      this.hybridEvents(this.props.results.data);
     }
   }
 
@@ -88,7 +100,30 @@ class Results extends Component {
       return obj;
     });
 
-    this.setState({ data, date: new Date(start) });
+    this.setState({ data });
+  };
+
+  hybridEvents = (results) => {
+    const { events, start } = results;
+    let lastTs = start;
+
+    const data = events.map((event, index) => {
+      let obj = {
+        event: index + 1,
+        correctWord: event.correctToken.text,
+        correctColour: event.correctToken.coltext,
+        selectedWord: event.selectedToken.text,
+        selectedColor: event.selectedToken.coltext,
+        outcome: event.type,
+        elapsed: (event.stamp - start) / 1000,
+        reaction: (event.stamp - lastTs) / 1000,
+      };
+      lastTs = event.stamp;
+
+      return obj;
+    });
+
+    this.setState({ data });
   };
 
   render() {
@@ -115,11 +150,15 @@ class Results extends Component {
                 return (
                   <tr key={event.event}>
                     {Object.values(event).map((val, index) => {
-                      return (
-                        <td scope={index === 0 ? "row" : null} key={index}>
-                          {val}
-                        </td>
-                      );
+                      if (index === 0) {
+                        return (
+                          <th scope="row" key={index}>
+                            {val}
+                          </th>
+                        );
+                      } else {
+                        return <td key={index}>{val}</td>;
+                      }
                     })}
                   </tr>
                 );

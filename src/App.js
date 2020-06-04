@@ -6,7 +6,7 @@ import Results from "./pages/Results";
 
 import StroopTest from "./tests/StroopTest";
 import TrailTest from "./tests/TrailTest";
-import Hybrid from "./tests/Hybrid";
+import HybridTest from "./tests/HybridTest";
 
 import "./App.css";
 import { Container, Card, CardBody, Button } from "reactstrap";
@@ -100,7 +100,9 @@ class App extends Component {
               {selectedPage === "trail" ? (
                 <TrailTest part="A12" handleResults={this.handleResults} />
               ) : null}
-              {selectedPage === "hybrid" ? <Hybrid /> : null}
+              {selectedPage === "hybrid" ? (
+                <HybridTest handleResults={this.handleResults} />
+              ) : null}
               {selectedPage === "results" ? (
                 <Results results={results} goBack={this.goBack} />
               ) : null}

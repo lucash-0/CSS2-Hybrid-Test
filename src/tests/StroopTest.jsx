@@ -14,7 +14,7 @@ class StroopTest extends Component {
 
     this.data = {
       words: ["green", "red", "blue", "orange", "purple", "yellow"],
-      colours: ["008000", "990000", "000099", "EE7600", "800080", "FFFF00"],
+      colours: ["00FF00", "FF0000", "0000FF", "FF7F00", "800080", "FFFF00"],
       combos: null,
     };
   }
@@ -54,8 +54,6 @@ class StroopTest extends Component {
     this.shuffle(wordarr, colarr);
     //console.log(wordarr);
     //console.log(colarr);
-
-    const halfsize = Math.floor(wordarr.length / 2);
 
     let combos = [];
 
