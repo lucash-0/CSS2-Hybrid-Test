@@ -110,7 +110,7 @@ class App extends Component {
           </Card>
         )}
         {selectedPage === "menu" ? (
-          <p className="text-monospace text-center mt-3 text-muted">v1.0.1</p>
+          <p className="text-monospace text-center mt-3 text-muted">v1.0.2</p>
         ) : null}
       </Container>
     );

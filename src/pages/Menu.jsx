@@ -11,10 +11,15 @@ class Menu extends Component {
     return (
       <Row>
         <Col sm="4">
-          <Card body>
+          <Card body className="h-100">
             <CardTitle className="h4">Stroop Test</CardTitle>
-            <CardText>This is the stroop test</CardText>
-            <Row>
+            <CardText>
+              The Stroop test is a classic clinical test of attentional
+              filtering. It is typically demonstrated as a reading versus color
+              naming task, where reading is more automatic and thus less
+              impacted.
+            </CardText>
+            <Row className="mt-auto">
               <Col>
                 <Button
                   color="primary"
@@ -33,10 +38,15 @@ class Menu extends Component {
           </Card>
         </Col>
         <Col sm="4">
-          <Card body inverse color="warning">
+          <Card body inverse color="warning" className="h-100">
             <CardTitle className="h4">Hybrid Test</CardTitle>
-            <CardText>This is the stroop test</CardText>
-            <Row>
+            <CardText>
+              The Hybrid Test is a a cognitive test that incorporates qualities
+              of both the Stroop Test and the Trail Making Test. Our experiment
+              is to test the validity of this test against the Stroop and Trail
+              tests to use in further research.
+            </CardText>
+            <Row className="mt-auto">
               <Col>
                 <Button
                   color="primary"
@@ -55,10 +65,15 @@ class Menu extends Component {
           </Card>
         </Col>
         <Col sm="4">
-          <Card body>
+          <Card body className="h-100">
             <CardTitle className="h4">Trail Test</CardTitle>
-            <CardText>This is the Trail test</CardText>
-            <Row>
+            <CardText>
+              The Trail Making Test is a neuropsychological test of visual
+              attention and task switching. It consists of two parts in which
+              the subject is instructed to connect a set of numbered dots as
+              quickly as possible while still maintaining accuracy.
+            </CardText>
+            <Row className="mt-auto">
               <Col>
                 <Button
                   color="primary"
