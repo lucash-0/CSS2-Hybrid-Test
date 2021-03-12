@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/CSS2-Hybrid-Test/static/css/main.1693a569.chunk.css",
+    "main.js": "/CSS2-Hybrid-Test/static/js/main.780c009a.chunk.js",
+    "main.js.map": "/CSS2-Hybrid-Test/static/js/main.780c009a.chunk.js.map",
+    "runtime-main.js": "/CSS2-Hybrid-Test/static/js/runtime-main.0807e312.js",
+    "runtime-main.js.map": "/CSS2-Hybrid-Test/static/js/runtime-main.0807e312.js.map",
+    "static/css/2.829c9cb5.chunk.css": "/CSS2-Hybrid-Test/static/css/2.829c9cb5.chunk.css",
+    "static/js/2.136240b7.chunk.js": "/CSS2-Hybrid-Test/static/js/2.136240b7.chunk.js",
+    "static/js/2.136240b7.chunk.js.map": "/CSS2-Hybrid-Test/static/js/2.136240b7.chunk.js.map",
+    "index.html": "/CSS2-Hybrid-Test/index.html",
+    "precache-manifest.7ca695a9288de10bbdfe4c941b1aef6a.js": "/CSS2-Hybrid-Test/precache-manifest.7ca695a9288de10bbdfe4c941b1aef6a.js",
+    "service-worker.js": "/CSS2-Hybrid-Test/service-worker.js",
+    "static/css/2.829c9cb5.chunk.css.map": "/CSS2-Hybrid-Test/static/css/2.829c9cb5.chunk.css.map",
+    "static/css/main.1693a569.chunk.css.map": "/CSS2-Hybrid-Test/static/css/main.1693a569.chunk.css.map",
+    "static/js/2.136240b7.chunk.js.LICENSE.txt": "/CSS2-Hybrid-Test/static/js/2.136240b7.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0807e312.js",
+    "static/css/2.829c9cb5.chunk.css",
+    "static/js/2.136240b7.chunk.js",
+    "static/css/main.1693a569.chunk.css",
+    "static/js/main.780c009a.chunk.js"
+  ]
+}
