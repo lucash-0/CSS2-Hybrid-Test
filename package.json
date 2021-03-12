@@ -2,6 +2,7 @@
   "name": "css2_2",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://lucashahn.dev/CSS2-Hybrid-Test",
   "dependencies": {
     "@lucash-0/react-neuropsych-trails": "^0.1.26",
     "@lucash-0/react-stroop-trails-hybrid": "^0.1.11",
@@ -18,6 +19,8 @@
     "reactstrap": "^8.4.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
